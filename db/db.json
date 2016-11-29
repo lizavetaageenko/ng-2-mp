@@ -1,0 +1,24 @@
+{
+  "location": [
+    {
+      "id": 2,
+      "name": "Shopping mall"
+    },
+    {
+      "id": 3,
+      "name": "Hospital"
+    },
+    {
+      "id": 4,
+      "name": "Plane"
+    },
+    {
+      "id": 5,
+      "name": "Theatre"
+    },
+    {
+      "id": "6",
+      "name": "Office1"
+    }
+  ]
+}

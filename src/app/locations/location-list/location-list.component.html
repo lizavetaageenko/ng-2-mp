@@ -1,6 +1,13 @@
 <div>
-  <div
-    *ngFor='let location of locations'>
-    {{location.name}}
-  </div>
+  <button class="btn btn-primary"
+          (click)="createLocation()">
+    New location
+  </button>
+</div>
+<div
+  *ngFor='let location of locations'>
+  <app-location
+    [location]="location"
+    (onDelete)="deleteLocation($event)">
+  </app-location>
 </div>

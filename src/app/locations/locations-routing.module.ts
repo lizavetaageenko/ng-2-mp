@@ -1,11 +1,15 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-import { LocationsComponent } from './locations.component';
+import {LocationResolveGuard} from './location-resolve.guard';
+import {LocationListComponent} from './location-list/location-list.component';
+import {LocationFormComponent} from './location-form/location-form.component';
 
 const locationsRoutes: Routes = [
-  { path: 'locations',  component: LocationsComponent }
-]
+  {path: '', component: LocationListComponent},
+  {path: 'new', component: LocationFormComponent},
+  {path: 'edit/:id', component: LocationFormComponent, resolve: { location: LocationResolveGuard }}
+];
 
 @NgModule({
   imports: [
@@ -15,4 +19,5 @@ const locationsRoutes: Routes = [
     RouterModule
   ]
 })
-export class LocationsRoutingModule { }
+export class LocationsRoutingModule {
+}

@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AboutModule } from './about/about.module';
-import { LocationsModule } from './locations/locations.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -20,8 +19,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    AboutModule,
-    LocationsModule
+    AboutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
