@@ -44,4 +44,12 @@ export class LocationFormComponent implements OnInit, OnDestroy {
   goBack(): void {
     this.router.navigate(['locations']);
   }
+
+  canDeactivate(): boolean {
+    if (this.route.data.value && (this.location.name == this.route.data.value.location.name) || !this.location.name) {
+      return true;
+    }
+
+    return confirm('Discard changes?');
+  }
 }

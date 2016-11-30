@@ -6,7 +6,8 @@ import { LocationsRoutingModule } from './locations-routing.module';
 import { LocationListComponent } from './location-list/location-list.component';
 import { LocationFormComponent } from './location-form/location-form.component';
 
-import {LocationResolveGuard} from './location-resolve.guard';
+import { LocationResolveGuard } from './location-resolve.guard';
+import { CanDeactivateGuard }    from './location-can-deactivate.guard';
 import { LocationObservableService } from './location-observable.service';
 import { LocationComponent } from './location/location.component';
 
@@ -19,7 +20,8 @@ import { LocationComponent } from './location/location.component';
   declarations: [LocationListComponent, LocationFormComponent, LocationComponent],
   providers: [
     LocationObservableService,
-    LocationResolveGuard
+    LocationResolveGuard,
+    CanDeactivateGuard
   ]
 })
 export class LocationsModule { }
